@@ -1,10 +1,10 @@
-import './css/style.css';
+import "./css/style.css";
 
 /* helper functions */
-import { fetchUsers } from "./utils/fetchData"
-
-import { handleData } from "./utils/handleData"
+import { fetchUsers } from './utils/fetchData.js'
+import { handleData } from './utils/handleData.js'
 import { modalComp } from "./components/modalComp"
+import { usersData } from './components/usersData.js'
 
 export async function init() {
 	app.innerText = "loading ..."
@@ -19,7 +19,6 @@ export async function init() {
 		return
 	}
 
-	// check if this is not an empty array
 	if (usersArray.length) handleData(usersArray)
 
 	app.appendChild(modalComp())
